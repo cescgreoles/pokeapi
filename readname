@@ -1,0 +1,19 @@
+function paint(pokemons) {
+    divPokemons.innerHTML = "";
+
+    for (const pokemon of pokemons) {
+        const imgPoke = document.createElement("img");
+        const h1Poke = document.createElement("h1");
+
+        imgPoke.className = "poke-image";
+        h1Poke.className = "title-h1";
+
+        imgPoke.src = pokemon.url;
+        h1Poke.textContent = pokemon.name;
+
+        document.body.appendChild(imgPoke);
+        document.body.appendChild(h1Poke);
+        imgPoke.appendChild(divPokemons);
+        h1Poke.appendChild(divPokemons);
+    }
+}
